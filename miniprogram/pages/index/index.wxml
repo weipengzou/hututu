@@ -1,0 +1,19 @@
+<view wx:for="{{blockList}}" wx:for-index="blockIdx" wx:key="blockIdx" class="block">
+
+  <!-- header -->
+  <view class="header">
+    <image src="{{ blockList[blockIdx]['userPhoto'] }}" mode="widthFix"></image>
+    <text>{{blockList[blockIdx]['name']}}</text>
+  </view>
+
+  <!-- content -->
+  <view class="content">
+    <image wx:if="{{blockList.length>0}}" src="{{blockList[blockIdx]['fileId']}}" mode="widthFix"></image>
+  </view>
+
+  <!-- footer -->
+  <view class="footer">
+    <i class="iconfont iconicon-test54"></i>:{{blockList[blockIdx]['like']}}
+  </view>
+
+</view>

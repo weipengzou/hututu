@@ -1,0 +1,27 @@
+<!-- 用户信息 -->
+<view wx:if="{{isJoin}}">
+  <view class="userInfo">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <text class="userName">{{name}}</text>
+    <text>城市:{{city}}</text>
+    <text>个人简介:{{aboutMe}}</text>
+  </view>
+  <!-- 用户内容 -->
+  <view>
+    <view class="myItem">
+      <text class="{{ curItem=='myPicture'?'active':'' }}" data-current="myPicture" bindtap="myItemChange">myPicture</text>
+      <text class="{{ curItem=='like'?'active':'' }}" data-current="like" bindtap="myItemChange">like</text>
+    </view>
+    <!-- 我的图片 -->
+    <view class="myPicList" wx:if="{{ curItem=='myPicture' }}">
+      <image wx:for="{{myBlock}}" wx:key="index" src="{{myBlock[index]['fileId']}}" mode="scaleToFill" lazy-load="true" style="height:{{imgLIstWidth}}px" data-index="{{index}}"></image>
+    </view>
+    <!-- 我的喜欢 -->
+    <view class="like" wx:else>
+      <text>我是like 页面</text>
+    </view>
+  </view>
+</view>
+
+<!-- 登录按钮 -->
+<button class="signInBtn" wx:else disabled="{{disabled}}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" type="primary">登录</button>

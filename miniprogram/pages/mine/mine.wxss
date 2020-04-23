@@ -1,0 +1,57 @@
+.signInBtn{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.userInfo {
+  margin: 50rpx;
+  overflow: hidden;
+  border-bottom: 1rpx solid gray;
+}
+
+.userInfo .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.userInfo text {
+  width: 100%;
+  margin: 50rpx 0;
+  display: block;
+}
+
+.userInfo .userName {
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.myItem {
+  display: flex;
+}
+
+.myItem text {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+  /* margin-bottom:10rpx; */
+}
+
+.myItem .active {
+  color: brown;
+  border-bottom: 10rpx solid brown;
+}
+
+.myPicList {
+  font-size: 0;
+}
+
+.myPicList image {
+  width: 50%;
+  font-size: 0;
+  border: 1px solid white;
+  box-sizing: border-box
+}

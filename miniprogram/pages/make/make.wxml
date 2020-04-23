@@ -1,0 +1,4 @@
+<text>上传自己的图片</text>
+<button bindtap="chooseImage">选择</button>
+<image wx:for="{{chooseImageList}}" wx:key="index" src="{{chooseImageList[index]}}">{{index}}</image>
+<button bindtap="upload">上传</button>
